@@ -1,4 +1,5 @@
 import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 #os.environ["OMP_NUM_THREADS"] = "1" # export OMP_NUM_THREADS=4
 #os.environ["OPENBLAS_NUM_THREADS"] = "1" # export OPENBLAS_NUM_THREADS=4
 #os.environ["MKL_NUM_THREADS"] = "1" # export MKL_NUM_THREADS=6
@@ -11,13 +12,22 @@ import pandas as pd
 from rdkit import Chem
 
 from multiprocessing import Pool
-from moltaut_src.utils import filter_mol
 import torch
-from moltaut_src.descriptor import mol2vec
-from moltaut_src.models import load_model
-from moltaut_src.optimize_mol import optimize
-from moltaut_src.gen_confs import gen_confs_set
-from moltaut_src.get_vmrs import enumerate_vmrs
+
+#from moltaut_src.utils import filter_mol
+#from moltaut_src.descriptor import mol2vec
+#from moltaut_src.models import load_model
+#from moltaut_src.optimize_mol import optimize
+#from moltaut_src.gen_confs import gen_confs_set
+#from moltaut_src.get_vmrs import enumerate_vmrs
+
+from utils import filter_mol
+from descriptor import mol2vec
+from models import load_model
+from optimize_mol import optimize
+from gen_confs import gen_confs_set
+from get_vmrs import enumerate_vmrs
+
 import warnings
 warnings.filterwarnings("ignore")
 

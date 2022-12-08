@@ -5,11 +5,19 @@ from scipy.spatial.distance import euclidean, cdist
 
 from openbabel import pybel
 from openbabel.openbabel import OBMolAtomIter, OBMolBondIter
-from moltaut_src.aevs import calc_descriptors
-from moltaut_src.sasa import get_sasa
+#from moltaut_src.aevs import calc_descriptors
+#from moltaut_src.sasa import get_sasa
+from aevs import calc_descriptors
+from sasa import get_sasa
+
 import pickle
 import torch
 from torch_geometric.data import Data
+
+###################################################### edit
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+###################################################### edit
 
 
 def get_atom_coords(at):
