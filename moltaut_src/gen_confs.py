@@ -10,6 +10,11 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem import PropertyMol
 
+###################################################### edit
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+###################################################### edit
+
 FORCEFIELD_CHOICES = ("uff", "mmff94", "mmff94s")
 
 NUM_CONF_DEF = -1

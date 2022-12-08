@@ -2,8 +2,15 @@ from moltaut_src.molgpka.protonate import protonate_mol
 from rdkit import Chem
 from rdkit.Chem.MolStandardize import rdMolStandardize
 from collections import namedtuple
-from moltaut_src.cut_mol import get_frags
-from moltaut_src.tautomer import enumerate_tauts
+#from moltaut_src.cut_mol import get_frags
+#from moltaut_src.tautomer import enumerate_tauts
+from cut_mol import get_frags
+from tautomer import enumerate_tauts
+
+###################################################### edit
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+###################################################### edit
 
 
 def is_ionic(m):
