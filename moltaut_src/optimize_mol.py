@@ -1,11 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-###################################################### edit
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
-###################################################### edit
-
 
 from ase.optimize import  BFGS
 from ase import units

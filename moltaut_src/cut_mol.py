@@ -1,11 +1,6 @@
 from rdkit import Chem
 import copy
 
-###################################################### edit
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
-###################################################### edit
-
 bond_smarts = "[#6+0;!$(*=,#[!#6])]!@!=!#[!#0;!#1;!$([NH,NH2,OH,SH]-[*;r]);!$(*=,#[*;!R])]"
 bond_pattern = Chem.MolFromSmarts(bond_smarts)
 

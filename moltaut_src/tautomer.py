@@ -1,16 +1,10 @@
-#from moltaut_src.config import transform_path
-from config import transform_path
+from moltaut_src.config import transform_path
 import copy
 from collections import namedtuple
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit import RDLogger
 RDLogger.DisableLog('rdApp.*')
-
-###################################################### edit
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
-###################################################### edit
 
 with open(transform_path, "r") as f:
     conts = f.readlines()
@@ -20,12 +14,6 @@ ps = Chem.SmilesParserParams()
 ps.removeHs = False
 
 def uncharge_mol(smi):
-
-    ###################################################### edit
-    from rdkit.Chem.MolStandardize import rdMolStandardize
-    unc = rdMolStandardize.Uncharger()
-    ###################################################### edit
-
     mol = Chem.MolFromSmiles(smi)
     for i in range(5):
         mol = unc.uncharge(mol)

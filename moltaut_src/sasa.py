@@ -5,11 +5,6 @@ from collections import namedtuple
 import numpy as np
 freesasa.setVerbosity(1)
 
-###################################################### edit
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
-###################################################### edit
-
 
 element_dict = {1: "H", 6: "C", 7: "N", 8: "O", 16: "S", 9: "F", 17: "Cl"}
 

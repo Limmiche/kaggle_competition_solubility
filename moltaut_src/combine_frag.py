@@ -1,11 +1,6 @@
 from rdkit import Chem
 from collections import namedtuple
 
-###################################################### edit
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
-###################################################### edit
-
 def get_linker_map_index(mol, smi, num):
     data = namedtuple("frag", "mol smi aidx_map_lidx")
     index_map = namedtuple("atom_idx_map_linker_idx", "atom_idx linker_idx")

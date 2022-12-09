@@ -17,11 +17,6 @@ from torch_geometric.nn import GCNConv, GATConv
 from torch_geometric.data import DataLoader
 from torch_geometric.nn import global_add_pool, global_mean_pool
 
-###################################################### edit
-#import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
-###################################################### edit
-
 n_features = 396
 
 class Net(torch.nn.Module):
