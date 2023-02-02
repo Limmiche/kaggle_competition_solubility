@@ -131,3 +131,9 @@ dmypy.json
 # Data too big
 Temp/
 Submissions/
+output/
+
+# Temp folders
+Temp2/
+JADBio/
+Utils/
